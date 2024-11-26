@@ -1,0 +1,12 @@
+Starting ICMP ping sweep on 192.168.1.1-10 at 2024-11-25 20:37:39...
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.1 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.2 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.3 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.4 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.5 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.6 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.7 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.8 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.9 echo-request 0
+Packet sent during ICMP ping sweep: IP / ICMP 10.0.0.95 > 192.168.1.10 echo-request 0
+Ping sweep completed at 2024-11-25 20:37:40.

@@ -1,0 +1,7 @@
+Sending 5 oversized UDP packets to 192.168.1.1:53 at 2024-11-25 20:37:39...
+Packet sent during UDP attack: IP / UDP 10.0.0.95:12345 > 192.168.1.1:domain / Raw
+Packet sent during UDP attack: IP / UDP 10.0.0.95:12346 > 192.168.1.1:domain / Raw
+Packet sent during UDP attack: IP / UDP 10.0.0.95:12347 > 192.168.1.1:domain / Raw
+Packet sent during UDP attack: IP / UDP 10.0.0.95:12348 > 192.168.1.1:domain / Raw
+Packet sent during UDP attack: IP / UDP 10.0.0.95:12349 > 192.168.1.1:domain / Raw
+Oversized UDP packets sent at 2024-11-25 20:37:39.

@@ -6,14 +6,18 @@ import oversized_udp
 import ping_sweep
 import os
 
+# Define the path for the 'logs' directory inside the CPTR 4950 folder
+base_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+logs_dir = os.path.join(base_dir, "CPTR 4950", "logs")  # Create the path to the logs directory
+
 # Ensure the 'logs' directory exists
-os.makedirs("logs", exist_ok=True)
+os.makedirs(logs_dir, exist_ok=True)
 
 # Initialize counters for analysis
 packet_count = {"TCP": 0, "UDP": 0, "ICMP": 0}
 
 # Log sniffing events to a text file
-sniffing_log_file = "logs/sniffing_log.txt"
+sniffing_log_file = os.path.join(logs_dir, "sniffing_log.txt")  # Path to sniffing_log.txt
 
 # Function to analyze packets
 def analyze_packet(packet):
